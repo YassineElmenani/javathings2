@@ -20,7 +20,9 @@ public class Library {
     }
     public void listBooks(){
         for(Book book : Books){
-            System.out.println(book.toString());
+            if (book.CheckAvailability()) { // Check if the book is not borrowed
+                System.out.println(book.toString());
+            }
         }
     }
     public boolean containsBook(Book book){
